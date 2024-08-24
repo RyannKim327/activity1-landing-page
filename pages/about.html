@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="./../assets/useless.css">
+  </head>
+  <body>
+    <main id="main">
+      
+    </main>
+  <script>
+    const informations = [
+      {
+        "title": "Online Presence",
+        "content": "A well-developed website serves as a digital storefront or portfolio, allowing businesses and individuals to establish a strong online presence. It helps in reaching a broader audience and connecting with people globally."
+      },{
+        "title": "Accessibility and Convenience",
+        "content": "Websites provide 24/7 access to information and services. This convenience is essential for users who want to browse products, find information, or interact with services at any time."
+      }
+    ]
+    informations.map(data => {
+      const fieldset = document.createElement("fieldset")
+      const legend = document.createElement("legend")
+      const p = document.createElement("p")
+      
+      legend.textContent = data.title
+      p.textContent = data.content
+      fieldset.appendChild(legend)
+      fieldset.appendChild(p)
+
+      document.getElementById("main").appendChild(fieldset)
+    })
+   </script>
+  </body>
+</html>

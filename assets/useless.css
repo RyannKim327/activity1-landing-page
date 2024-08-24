@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  user-select: none;
+  border: none;
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  > main {
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+
+    > fieldset {
+      border-radius: 0.125rem;
+      margin: 1rem 0;
+      padding: 0.25rem;
+      box-shadow: 3px 3px 8px rgba(33, 33, 33, 0.3);
+      background-color: #fcfbf4;
+
+      > legend {
+        font-size: 0.875rem;
+        border-radius: 0.125rem;
+        padding: 0 0.25rem;
+        margin-left: 1rem;
+        box-shadow: 3px 3px 5px rgba(33, 33, 33, 0.3);
+        background-color: #fcfbf4;
+      }
+      > p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
