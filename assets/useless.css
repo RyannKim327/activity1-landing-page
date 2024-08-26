@@ -9,13 +9,32 @@
 }
 
 body {
+  background-color: transparent;
   width: 100vw;
   height: 100vh;
 
   > main {
+    display: flex;
+    flex-direction: column;
     padding: 0.5rem;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background-color: transparent;
+      color: black;
+      font-weight: bold;
+      font-family: "Times New Roman", serif;
+      font-size: 1.125rem;
+      padding: 0.125rem 0.75rem;
+      margin: 2rem;
+      border-radius: 0.235rem;
+      box-shadow:
+        3px 3px 5px rgba(33, 33, 33, 0.75),
+        -2px -2px 3px inset rgba(33, 33, 33, 0.3);
+    }
 
     > fieldset {
       border-radius: 0.125rem;
