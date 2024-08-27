@@ -7,6 +7,7 @@
   box-sizing: border-box;
   transition: all 0.05s;
   overflow: hidden;
+  transition: all 0.75s ease-in-out;
 }
 
 body {
@@ -54,6 +55,21 @@ body {
 
     > .right {
       grid-area: right;
+
+      header {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          margin: 0 0.5rem;
+          li {
+            padding: 0.125rem 0.5rem;
+          }
+        }
+      }
 
       > #page {
         width: 100%;
@@ -119,5 +135,23 @@ body {
 @keyframes l3-2 {
   100% {
     top: -0.1px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  main {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    > .left {
+      display: none;
+      width: 0;
+    }
+    > .right {
+      width: 100%;
+      header {
+        display: flex !important;
+      }
+    }
   }
 }

@@ -2,15 +2,17 @@ const access = (file) => {
   const obj = document.getElementById("page");
 
   const title = document.getElementById("title");
-
+  const header_title = document.getElementById("header-title");
   switch (file) {
     case "main":
-      title.textContent = "Homepage"
-      break
+      title.textContent = "Homepage";
+      header_title.textContent = "Homepage";
+      break;
     case "about":
-      title.textContent = "About us"
-      document.head.title = "About us"
-      break
+      title.textContent = "About us";
+      header_title.textContent = "About us";
+      document.head.title = "About us";
+      break;
   }
 
   obj.data = `pages/${file}.html`;
@@ -29,6 +31,7 @@ const urlExtractor = (entity) => {
 
 const addNavigations = () => {
   const ul = document.getElementById("lists");
+  const header_ul = document.getElementById("header-ul");
   const urls = [
     {
       name: "Home",
@@ -46,6 +49,14 @@ const addNavigations = () => {
       location.href = `?page=${data.url}`;
     };
     ul.appendChild(li);
+  });
+  urls.map((data) => {
+    const li = document.createElement("li");
+    li.textContent = data.name;
+    li.onclick = () => {
+      location.href = `?page=${data.url}`;
+    };
+    header_ul.appendChild(li);
   });
 };
 

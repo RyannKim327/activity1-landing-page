@@ -13,6 +13,10 @@ body {
   width: 100vw;
   height: 100vh;
 
+  > #about {
+    align-items: start !important;
+  }
+
   > main {
     display: flex;
     flex-direction: column;
@@ -22,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    button {
+    > button {
       background-color: transparent;
       color: black;
       font-weight: bold;
@@ -35,21 +39,23 @@ body {
         3px 3px 5px rgba(33, 33, 33, 0.75),
         -2px -2px 3px inset rgba(33, 33, 33, 0.3);
     }
-
-    > fieldset {
-      border-radius: 0.125rem;
-      margin: 1rem 0;
-      padding: 0.25rem;
-      box-shadow: 3px 3px 8px rgba(33, 33, 33, 0.3);
-      background-color: #fcfbf4;
-
-      > legend {
-        font-size: 0.875rem;
+    > div {
+      overflow-y: scroll;
+      > fieldset {
         border-radius: 0.125rem;
-        padding: 0 0.25rem;
-        margin-left: 1rem;
-        box-shadow: 3px 3px 5px rgba(33, 33, 33, 0.3);
+        margin: 1rem 0;
+        padding: 0.25rem;
+        box-shadow: 3px 3px 8px rgba(33, 33, 33, 0.3);
         background-color: #fcfbf4;
+
+        > legend {
+          font-size: 0.875rem;
+          border-radius: 0.125rem;
+          padding: 0 0.25rem;
+          margin-left: 1rem;
+          box-shadow: 3px 3px 5px rgba(33, 33, 33, 0.3);
+          background-color: #fcfbf4;
+        }
       }
       > p {
         font-size: 0.75rem;
